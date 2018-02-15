@@ -6,6 +6,10 @@ pipeline {
          string(name: 'tomcat_prod', defaultValue: '54.154.53.89', description: 'Production Server')
     }
     
+    tools {
+      Maven 'localMaven'
+    }
+    
     triggers {
          pollSCM('* * * * *')
      }
